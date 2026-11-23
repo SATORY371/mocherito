@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#6f321d" />
+    <meta name="description" content="Carta digital de Mocherito - Taberna Criolla" />
+    <title>MOCHERITO — Taberna Criolla</title>
+    <link rel="stylesheet" href="css/styles.css?v=4" />
+  </head>
+  <body>
+    <main class="menu-shell" id="app">
+      <header class="topbar" aria-label="Controles de la carta">
+        <button class="icon-button" id="homeButton" type="button" title="Ir a la portada" aria-label="Ir a la portada">
+          <span aria-hidden="true">⌂</span>
+        </button>
+        <div class="page-status" aria-live="polite">
+          <span id="pageCurrent">1</span>
+          <span>/</span>
+          <span id="pageTotal">4</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-button" id="zoomOutButton" type="button" title="Reducir" aria-label="Reducir zoom">−</button>
+          <button class="icon-button" id="zoomInButton" type="button" title="Ampliar" aria-label="Aumentar zoom">+</button>
+          <button class="icon-button" id="fullscreenButton" type="button" title="Pantalla completa" aria-label="Pantalla completa">⛶</button>
+        </div>
+      </header>
+
+      <section class="book" id="book" aria-label="Carta digital">
+        <div class="corner corner-tl" aria-hidden="true"></div>
+        <div class="corner corner-tr" aria-hidden="true"></div>
+        <div class="corner corner-bl" aria-hidden="true"></div>
+        <div class="corner corner-br" aria-hidden="true"></div>
+        <article class="page is-active" id="page" aria-live="polite"></article>
+      </section>
+
+      <nav class="page-nav" aria-label="Navegación de páginas">
+        <button class="nav-button" id="prevButton" type="button" aria-label="Página anterior">
+          <span aria-hidden="true">‹</span>
+          <span class="nav-label">Anterior</span>
+        </button>
+        <div class="page-dots" id="pageDots" aria-label="Seleccionar página"></div>
+        <button class="nav-button" id="nextButton" type="button" aria-label="Página siguiente">
+          <span class="nav-label">Siguiente</span>
+          <span aria-hidden="true">›</span>
+        </button>
+      </nav>
+    </main>
+
+    <script src="menu-data.js?v=4"></script>
+    <script src="js/app.js?v=4"></script>
+  </body>
+</html>
